@@ -1,24 +1,35 @@
-if SHIELD_KLOTZ_DONGLE
+#if SHIELD_KLOTZ_DONGLE
+
+#config ZMK_KEYBOARD_NAME
+#    default "Klotz"
+
+#config ZMK_SPLIT
+#    default y
+
+#config ZMK_SPLIT_ROLE_CENTRAL
+#    default y
+
+#config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+#    default 2
+
+# Set this to ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS + your desired number of BT profiles (default is 5)
+#config BT_MAX_CONN
+#    default 5
+
+# Set this to the same number as BT_MAX_CONN
+#config BT_MAX_PAIRED
+#    default 5
+
+#endif
+
+# until i get the dongle back running
+if SHIELD_KLOTZ_LEFT
 
 config ZMK_KEYBOARD_NAME
     default "Klotz"
 
-config ZMK_SPLIT
-    default y
-
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
-
-config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
-    default 2
-
-# Set this to ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS + your desired number of BT profiles (default is 5)
-config BT_MAX_CONN
-    default 5
-
-# Set this to the same number as BT_MAX_CONN
-config BT_MAX_PAIRED
-    default 5
 
 endif
 
@@ -26,8 +37,5 @@ if SHIELD_KLOTZ_LEFT || SHIELD_KLOTZ_RIGHT
 
 config ZMK_SPLIT
     default y
-
-config ZMK_SPLIT_ROLE_CENTRAL
-    default n
 
 endif
