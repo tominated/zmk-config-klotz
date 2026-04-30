@@ -7,13 +7,14 @@
 #
 ---
 include:
-  - board: seeeduino_xiao_ble
-    shield: klotz_dongle prospector_adapter
-  - board: seeeduino_xiao_ble
-    shield: settings_reset
+  # - board: seeeduino_xiao_ble
+  #   shield: klotz_dongle prospector_adapter
+  # - board: seeeduino_xiao_ble
+  #   shield: settings_reset
 
   - board: nice_nano_v2
     shield: klotz_left
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME="Klotz" -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
   - board: nice_nano_v2
     shield: klotz_right
   - board: nice_nano_v2
