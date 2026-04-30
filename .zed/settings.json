@@ -1,0 +1,6 @@
+{
+  "file_types": {
+    "devicetree": ["overlay"],
+    "Kconfig": ["conf"],
+  },
+}
