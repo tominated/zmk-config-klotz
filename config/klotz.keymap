@@ -21,7 +21,7 @@
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <2 1>;
             bindings = <&kp ESC>;
         };
 
@@ -77,7 +77,12 @@
 
         combo_tab {
             bindings = <&kp TAB>;
-            key-positions = <1 2>;
+            key-positions = <11 12>;
+        };
+
+        combo_grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <0 1>;
         };
     };
 
@@ -103,10 +108,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-&kp Q             &kp W       &kp E        &kp R          &kp T          &kp Y          &kp U        &kp I        &kp O       &kp P
-&mt LGUI A        &mt LALT S  &mt LSHFT D  &mt LCTRL F    &kp G          &kp H          &mt RCTRL J  &mt LSHFT K  &mt L E     &lt 1 SEMICOLON
-&mt LEFT_SHIFT Z  &kp X       &kp C        &kp V          &kp B          &kp N          &kp M        &kp COMMA    &kp PERIOD  &mt SLASH RIGHT_SHIFT
-                                           &lt NAV SPACE  &lt SYM SPACE  &kp BACKSPACE  &kp ENTER
+&kp Q             &kp W           &kp E       &kp R        &kp T        &kp Y          &kp U        &kp I            &kp O            &kp P
+&kp A             &mt LEFT_GUI S  &mt LALT D  &mt LCTRL F  &kp G        &kp H          &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI E  &lt 1 SEMICOLON
+&mt LEFT_SHIFT Z  &kp X           &kp C       &kp V        &kp B        &kp N          &kp M        &kp COMMA        &kp PERIOD       &mt SLASH RIGHT_SHIFT
+                                              &lt 1 SPACE  &lt 2 SPACE  &kp BACKSPACE  &kp ENTER
             >;
 
             sensor-bindings =
@@ -119,7 +124,7 @@
         nav_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "NAVI";
+            label = "NAV";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -133,10 +138,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-&kp ESC    &bt BT_CLR  &kp UP    &kp EQUAL  &kp LBRC  &kp RBRC  &kp KP_N7  &kp PG_UP  &kp KP_N9  &kp KP_PLUS
-&kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT  &kp LBKT  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp KP_MINUS
-&kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR  &kp RPAR  &kp PG_DN  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY
-                                 &trans     &trans    &mo ADJ   &kp KP_N0
+&trans  &trans    &kp UP    &trans     &trans  &kp PAGE_UP    &kp HOME          &kp UP_ARROW  &kp END     &trans
+&trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &kp PAGE_DOWN  &kp LEFT          &kp UP        &kp RIGHT   &trans
+&trans  &trans    &trans    &trans     &trans  &trans         &kp C_PLAY_PAUSE  &kp C_PREV    &kp C_NEXT  &trans
+                            &trans     &trans  &trans         &trans
             >;
         };
 
@@ -162,7 +167,7 @@
 &kp EXCL     &kp N7  &kp N8  &kp N9  &kp PRCNT  &kp CARET     &kp N7  &kp N8  &kp N9  &kp DQT
 &kp RA(A)    &kp N4  &kp N5  &kp N6  &trans     &kp C_MUTE    &kp N4  &kp N5  &kp N6  &kp RA(O)
 &kp RA(F18)  &kp N1  &kp N2  &kp N3  &trans     &kp C_VOL_DN  &kp N1  &kp N2  &kp N3  &kp BSLH
-                             &kp N0  &mo ADJ    &trans        &kp N0
+                             &kp N0  &mo 3      &trans        &kp N0
             >;
         };
 
