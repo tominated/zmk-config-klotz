@@ -1,6 +1,6 @@
 {
   "file_types": {
-    "devicetree": ["overlay"],
+    "devicetree": ["overlay", "keymap"],
     "Kconfig": ["conf"],
   },
 }

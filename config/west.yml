@@ -4,12 +4,16 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: urob
+      url-base: https://github.com/urob
     - name: carrefinho
       url-base: https://github.com/carrefinho
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+    - name: zmk-auto-layer
+      remote: urob
     - name: prospector-zmk-module
       remote: carrefinho
       revision: main
